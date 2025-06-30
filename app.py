@@ -328,8 +328,8 @@ class GenerateImageRequest(BaseModel):
 @app.get("/", response_class=HTMLResponse)
 async def read_root():
     """Serves the main HTML application."""
-    # Ensure index.html is in the same directory as app.py (or modify path)
-    return FileResponse("index.html")
+    # Ensure main.html is in the same directory as app.py (or modify path)
+    return FileResponse("main.html")
 
 @app.post("/generate-image")
 async def generate_image_endpoint(request: GenerateImageRequest):
