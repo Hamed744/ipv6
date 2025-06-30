@@ -13,7 +13,7 @@ COPY ./startup.sh /app/
 
 # Copy your frontend HTML file
 # The comment is now on a separate line to avoid parsing issues.
-COPY ./index.html /app/index.html
+COPY ./main.html /app/main.html
 
 # Make the startup script executable
 RUN chmod +x /app/startup.sh
