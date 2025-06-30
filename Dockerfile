@@ -10,7 +10,10 @@ COPY ./requirements.txt /app/
 RUN pip install --no-cache-dir -r /app/requirements.txt
 COPY ./app.py /app/
 COPY ./startup.sh /app/
-COPY ./index.html /app/index.html # Copy your frontend HTML file
+
+# Copy your frontend HTML file
+# The comment is now on a separate line to avoid parsing issues.
+COPY ./index.html /app/index.html
 
 # Make the startup script executable
 RUN chmod +x /app/startup.sh
